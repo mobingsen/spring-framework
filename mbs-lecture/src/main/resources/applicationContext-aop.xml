@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="aopService" class="org.mbs.lecture.aop.service.impl.AopServiceImpl"/>
+	<bean id="aopAdvisor" class="org.mbs.lecture.aop.advisor.AopAdvisor"/>
+	<bean id="myAop" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="org.mbs.lecture.aop.service.AopService"/>
+		<property name="interceptorNames">
+			<list>
+				<value>aopAdvisor</value>
+			</list>
+		</property>
+		<property name="target" ref="aopService"/>
+	</bean>
+</beans>
