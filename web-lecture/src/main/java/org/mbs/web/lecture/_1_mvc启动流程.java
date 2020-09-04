@@ -15,5 +15,5 @@ package org.mbs.web.lecture;
  *	4.最后回到了tomcat的启动流程中。
  * Created by mbs on 2020/9/4 10:25
  */
-public class _1 {
+public class _1_mvc启动流程 {
 }
