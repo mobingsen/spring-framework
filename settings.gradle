@@ -29,5 +29,7 @@ rootProject.name = "spring"
 rootProject.children.each {project ->
 	project.buildFileName = "${project.name}.gradle"
 }
-include 'mbs-lecture'
+// 这两个必须放这里，否则会出现依赖解释不了的情况。原因还没找到？？？？？
+include "mbs-lecture"
+include "web-lecture"
 
