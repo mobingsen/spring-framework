@@ -35,7 +35,7 @@ import org.springframework.core.io.Resource;
  * 3. 在创建Bean之前，首先需要将该Bean的创建标识指定好，表示该bean已经或是即将被创建，目的是增强缓存的效率。
  * 4. 根据bean的scope属性来确定当前这个bean是一个singleton还是一个prototype的bean，然后创建相应的对象。
  * 5. 无论是singleton还是prototype的bean，其创建的过程是一致的。
- * 6. 通过Java发射机制来创建Bean的实例，在创建之前需要检查构造方法的访问修饰符，如果不是public的，则会调用setAccessible（true）方法来
+ * 6. 通过Java反射机制来创建Bean的实例，在创建之前需要检查构造方法的访问修饰符，如果不是public的，则会调用setAccessible（true）方法来
  * 	  突破Java的语法限制，使得可以通过非public构造方法来完成对象实例的创建。
  * 7. 当对象创建完毕后，开始进行对象属性的注入。
  * 8. 在对象属性注入的过程中，Spring除去使用之前通过BeanDefinition对象获取的Bean信息外，还会通过反射的方式获取到上面所创建的Bean中的真
