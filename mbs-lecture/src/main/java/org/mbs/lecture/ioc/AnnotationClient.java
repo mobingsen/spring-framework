@@ -11,7 +11,9 @@ public class AnnotationClient {
 
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
-		Object person = context.getBean("person");
-		System.out.println("person: " + person);
+//		Object person = context.getBean("person");
+//		System.out.println("person: " + person);
+		PersonService personService = context.getBean(PersonService.class);
+		personService.svi();
 	}
 }

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * Created by mbs on 2020/8/18 15:24
  */
 @Configuration
-//@ComponentScan(basePackages = {"org.mbs.lecture"})
+@ComponentScan(basePackages = {"org.mbs.lecture.ioc"})
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class JavaConfig {
 
