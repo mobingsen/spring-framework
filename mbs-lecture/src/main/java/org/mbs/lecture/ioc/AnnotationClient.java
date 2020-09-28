@@ -5,7 +5,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 /**
  * BeanDefinition
  * IOC容器的含义
- * Created by mbs on 2020/8/18 15:23
+ *
+ * AutowireCapableBeanFactory 自动装配五种类型：
+ * AbstractAutowireCapableBeanFactory
+ *
+ *
+ * Created by xiaomo on 2020/8/18 15:23
  */
 public class AnnotationClient {
 
